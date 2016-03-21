@@ -4,7 +4,7 @@
 (function () {
     'use strict';
 
-    angular.module('angular-toastr-exception', [])
+    angular.module('toastr', [])
         .config(ExceptionConfig)
         .factory('Exception', Exception);
     ExceptionConfig.$inject = ['$provide'];

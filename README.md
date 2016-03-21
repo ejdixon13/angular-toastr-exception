@@ -27,10 +27,27 @@ Load the script files in your application:
 Add the specific module to your dependencies:
 
 ```javascript
-angular.module('myApp', ['angular-toastr-exception', ...])
+angular.module('myApp', ['toastr', ...])
 ```
 
 Example Usage:
 ```
+//After injecting Exception
+var bodyText = 'This is the body text.';
+var headerText = 'This is the header text.'
+Exception.catcher(bodyText)(headerText);
+```
+You can still modify the toastr options by
 
+```
+angular.module('mms-util-client').config(ToastrConfigFunction);
+    ToastrConfigFunction.$inject = ['toastrConfig'];
+
+    function ToastrConfigFunction(toastrConfig) {
+        angular.extend(toastrConfig, {
+            closeButton: true,
+            extendedTimeOut: 100000,
+            timeOut: 4000
+        });
+    }
 ```

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angular-toastr-exception">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Toastr Exception</title>
+
+    <!--bower:css-->
+    <!--endbower-->
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+<body>
+
+<div ng-controller="ctrl as vm">
+    Test: {{vm.test}}
+</div>
+
+<!--bower:js-->
+<script src="lib/angular/angular.js"></script>
+<!--endbower-->
+
+<!-- inject:js -->
+<script src="src/angular-toastr-exception.js"></script>
+<!-- endinject -->
+
+<script type="application/javascript">
+    angular.module('angular-toastr-exception').controller('ctrl', [function(){
+        var vm = this;
+        vm.test = 'Test Complete';
+    }])
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+    "directory": "lib",
+    "main" : "./dist/angular-toastr-exception.min.js",
+    "scripts" : {
+        "postinstall": "gulp build"
+    }
+}

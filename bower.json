@@ -1,0 +1,8 @@
+{
+  "name": "angular-toastr-exception",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-toastr": "~1.5.0"
+  }
+}

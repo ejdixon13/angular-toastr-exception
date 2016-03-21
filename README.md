@@ -31,7 +31,7 @@ angular.module('myApp', ['toastr', ...])
 ```
 
 Example Usage:
-```
+```javascript
 //After injecting Exception
 var bodyText = 'This is the body text.';
 var headerText = 'This is the header text.'
@@ -39,7 +39,7 @@ Exception.catcher(bodyText)(headerText);
 ```
 You can still modify the toastr options by
 
-```
+```javascript
 angular.module('mms-util-client').config(ToastrConfigFunction);
     ToastrConfigFunction.$inject = ['toastrConfig'];
 

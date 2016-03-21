@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="angular-toastr-exception">
+<html lang="en" ng-app="toastr">
 <head>
     <meta charset="UTF-8">
     <title>Angular Toastr Exception</title>
 
     <!--bower:css-->
+    <link rel="stylesheet" href="lib/angular-toastr/dist/angular-toastr.css" />
     <!--endbower-->
     <!-- inject:css -->
     <!-- endinject -->
@@ -17,6 +18,7 @@
 
 <!--bower:js-->
 <script src="lib/angular/angular.js"></script>
+<script src="lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
 <!--endbower-->
 
 <!-- inject:js -->
@@ -24,9 +26,10 @@
 <!-- endinject -->
 
 <script type="application/javascript">
-    angular.module('angular-toastr-exception').controller('ctrl', [function(){
+    angular.module('toastr').controller('ctrl', ['Exception', function(Exception){
         var vm = this;
         vm.test = 'Test Complete';
+        Exception.catcher('Error')('Header');
     }])
 </script>
 </body>

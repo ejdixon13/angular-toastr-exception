@@ -23,8 +23,10 @@
             var exceptionParts = exception.stack.split('(');
             var fileParts = exceptionParts[1].split(')')[0].split('/');
 
-            var toastr = $injector.get('toastr');
-            toastr.error(fileParts[fileParts.length - 1], exceptionParts[0]);
+            if(!$injector.get('toastrConfig').isProd) {
+                var toastr = $injector.get('toastr');
+                toastr.error(fileParts[fileParts.length - 1], exceptionParts[0]);
+            }
         };
     }
 

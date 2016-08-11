@@ -1,6 +1,7 @@
 {
     "directory": "lib",
     "main" : "./dist/angular-toastr-exception.min.js",
+    "registry": "http://bower.ldschurch.org",
     "scripts" : {
         "postinstall": "gulp build"
     }
